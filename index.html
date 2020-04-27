@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>
+      Assignmemt ที่ 2 | วิชาเครือข่ายเทคโนโลยีเว็บและการประยุกต์ใช้งาน
+    </title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      href="https://getbootstrap.com/docs/4.0/examples/checkout/form-validation.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+
+    <div id="app">
+      <div class="container">
+        <div class="py-5 text-center">
+          <img
+            class="d-block mx-auto mb-4"
+            src="TRUlogo-mini.png"
+            alt
+            width="72"
+            height="72"
+          />
+          <h2>แบบฟอร์มเก็บประวัติศิษย์เก่า</h2>
+          <p>
+            Assignmemt ที่ 2 | วิชาเครือข่ายเทคโนโลยีเว็บและการประยุกต์ใช้งาน
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 order-md-1">
+            <h3 class="mb-3">กรอกข้อมูล</h3>
+            <form method="GET">
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="preName">คำนำหน้า</label>
+                  <div class="row">
+                    <div class="col-md-3 mb-0">
+                      <select
+                        class="custom-select"
+                        name="preName"
+                        onchange="onPreNameChange(this.value)"
+                      >
+                        <option selected value="0">เลือก</option>
+                        <option value="1">นาย</option>
+                        <option value="2">นาง</option>
+                        <option value="3">นางสาว</option>
+                        <option value="4">อื่นๆ</option>
+                      </select>
+                    </div>
+                    <div class="col mb-0 px-0">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="preNameOption"
+                        placeholder="พันเอก/พันโท/สิบโท"
+                        value
+                        required
+                        style="display: none;"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">ชื่อ</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder
+                    value
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">นามสกุล</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder
+                    value
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="bdate">
+                  วันเกิด
+                  <span class="text-muted">(ปี ค.ศ.)</span>
+                </label>
+                <input type="date" class="form-control" id="bdate" bdate" />
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="sex">เพศ</label>
+                  <div class="row">
+                    <div class="col-md-12 mb-0">
+                      <input type="radio" id="male" name="sex" value="male" />
+                      <label for="male">ชาย</label><br />
+                      <input
+                        type="radio"
+                        id="female"
+                        name="sex"
+                        value="female"
+                      />
+                      <label for="female">หญิง</label><br />
+                      <div class="row">
+                        <div class="col-6">
+                          <input
+                            type="radio"
+                            id="other"
+                            name="sex"
+                            value="other"
+                          />
+                          <label for="other" class="pr-2">อื่นๆ</label>
+                          <input
+                            class="form-control"
+                            style="display: inline; width: auto;"
+                            type="text"
+                            placeholder="เพศทางเลือก"
+                            name="sexOption"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-0 px-0">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="preNameOption"
+                        placeholder="พันเอก/พันโท/สิบโท"
+                        value
+                        required
+                        style="display: none;"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="scode">รหัสนักศึกษา</label>
+                <input type="number" class="form-control" id="scode"
+                placeholder="6x262620xxx" scode" />
+              </div>
+
+              <div class="mb-3">
+                <label for="endyear">ปีที่จบ</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="endyear"
+                  placeholder="2020"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="address">ที่อยู่</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="1234 Main St"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email">อีเมล์</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="social">Social network ต่างๆ</label>
+
+                <textarea
+                  name="message"
+                  rows="10"
+                  cols="30"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <hr class="mb-4" />
+
+              <h4 class="mb-3">ประวัติการทำงาน</h4>
+              <div id="listWorkHistory">
+                <div class="row pt-3">
+                  <div class="col-md-5 mb-3">
+                    <label for="startDate">
+                      เริ่มทำงาน
+                      <span class="text-muted">(ปี ค.ศ.)</span>
+                    </label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="startDate"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="role">ตำแหน่ง</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="zip"
+                      placeholder="วิจัยและพัฒนา"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="company">บริษัท</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="company"
+                    placeholder="Sony"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="companyAddress">ที่ตั้ง</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companyAddress"
+                    placeholder="1234 Main St"
+                  />
+                </div>
+                <hr class="my-1 pb-3" />
+              </div>
+              <a
+                href="#"
+                onclick="addWorkHistory(event)"
+                class="py-9 my-0 stretched-link text-success"
+                >เพิ่ม ประวัติการทำงาน</a
+              >
+
+              <hr class="my-5" />
+              <button class="btn btn-primary btn-lg btn-block" type="button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">
+            &copy; 2020 Assignmemt ที่ 2 |
+            วิชาเครือข่ายเทคโนโลยีเว็บและการประยุกต์ใช้งาน
+          </p>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#">Privacy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>'
+        )
+      function onPreNameChange(value) {
+        if (value == 4) {
+          document.getElementById('preNameOption').style.display = 'block'
+        } else {
+          document.getElementById('preNameOption').style.display = 'none'
+        }
+      }
+      function addWorkHistory(e) {
+        var h = document.getElementById('listWorkHistory')
+        h.insertAdjacentHTML(
+          'beforeend',
+          '<div class="row pt-3"> <div class="col-md-5 mb-3"> <label for="startDate"> เริ่มทำงาน <span class="text-muted">(ปี ค.ศ.)</span> </label> <input type="date" class="form-control" id="startDate" required /> </div> <div class="col-md-7 mb-3"> <label for="role">ตำแหน่ง</label> <input type="text" class="form-control" id="zip" placeholder="วิจัยและพัฒนา" required /> </div> </div> <div class="mb-3"> <label for="company">บริษัท</label> <input type="text" class="form-control" id="company" placeholder="Sony" /> </div> <div class="mb-3"> <label for="companyAddress">ที่ตั้ง</label> <input type="text" class="form-control" id="companyAddress" placeholder="1234 Main St" /> </div> <hr class="my-1 pb-3" />'
+        )
+        e.preventDefault()
+      }
+    </script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
