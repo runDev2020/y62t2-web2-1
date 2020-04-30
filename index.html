@@ -210,11 +210,8 @@
               <hr class="mb-4" />
 
               <h4 class="mb-3">ประวัติการทำงาน</h4>
-              <div id="listWorkHistory" class="border border-secondary p-2">
+              <div id="listWorkHistory" class="p-2">
                 <div class="row pt-3">
-                  <div class="col-12">
-                    <button class="d-inline float-right btn-sm btn-sm btn-danger">close</button>
-                  </div>
                   <div class="col-md-5 mb-3">
                     <label for="startDate">
                       เริ่มทำงาน
@@ -261,7 +258,7 @@
                 <hr class="my-1 pb-3" />
               </div>
               <a
-                href="#"
+                href="#listWorkHistory"
                 onclick="addWorkHistory(event)"
                 class="py-9 my-0 stretched-link text-success"
                 >เพิ่ม ประวัติการทำงาน</a
@@ -322,6 +319,7 @@
           '<div class="row pt-3"> <div class="col-md-5 mb-3"> <label for="startDate"> เริ่มทำงาน <span class="text-muted">(ปี ค.ศ.)</span> </label> <input type="date" class="form-control" id="startDate" required /> </div> <div class="col-md-7 mb-3"> <label for="role">ตำแหน่ง</label> <input type="text" class="form-control" id="zip" placeholder="วิจัยและพัฒนา" required /> </div> </div> <div class="mb-3"> <label for="company">บริษัท</label> <input type="text" class="form-control" id="company" placeholder="Sony" /> </div> <div class="mb-3"> <label for="companyAddress">ที่ตั้ง</label> <input type="text" class="form-control" id="companyAddress" placeholder="1234 Main St" /> </div> <hr class="my-1 pb-3" />'
         )
         e.preventDefault()
+        // return false;
       }
     </script>
     <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
