@@ -248,12 +248,10 @@
 
                 <div class="mb-3">
                   <label for="companyAddress">ที่ตั้ง</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="companyAddress"
-                    placeholder="1234 Main St"
-                  />
+                  <textarea 
+                  class="form-control"
+                  placeholder="1234 หมู่ 55 นายาว 15000"
+                  name="companyAddress" id="companyAddress" rows="10"></textarea>
                 </div>
                 <hr class="my-1 pb-3" />
               </div>
@@ -316,7 +314,7 @@
         var h = document.getElementById('listWorkHistory')
         h.insertAdjacentHTML(
           'beforeend',
-          '<div class="row pt-3"> <div class="col-md-5 mb-3"> <label for="startDate"> เริ่มทำงาน <span class="text-muted">(ปี ค.ศ.)</span> </label> <input type="date" class="form-control" id="startDate" required /> </div> <div class="col-md-7 mb-3"> <label for="role">ตำแหน่ง</label> <input type="text" class="form-control" id="zip" placeholder="วิจัยและพัฒนา" required /> </div> </div> <div class="mb-3"> <label for="company">บริษัท</label> <input type="text" class="form-control" id="company" placeholder="Sony" /> </div> <div class="mb-3"> <label for="companyAddress">ที่ตั้ง</label> <input type="text" class="form-control" id="companyAddress" placeholder="1234 Main St" /> </div> <hr class="my-1 pb-3" />'
+          '<div class="row pt-3"> <div class="col-md-5 mb-3"> <label for="startDate"> เริ่มทำงาน <span class="text-muted">(ปี ค.ศ.)</span> </label> <input type="date" class="form-control" id="startDate" required /> </div> <div class="col-md-7 mb-3"> <label for="role">ตำแหน่ง</label> <input type="text" class="form-control" id="zip" placeholder="วิจัยและพัฒนา" required /> </div> </div> <div class="mb-3"> <label for="company">บริษัท</label> <input type="text" class="form-control" id="company" placeholder="Sony" /> </div> <div class="mb-3"> <label for="companyAddress">ที่ตั้ง</label> <textarea class="form-control" placeholder="1234 หมู่ 55 นายาว 15000" name="companyAddress" id="companyAddress" rows="10"></textarea> </div> <hr class="my-1 pb-3" />'
         )
         e.preventDefault()
         // return false;
